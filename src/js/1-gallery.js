@@ -85,4 +85,3 @@ new SimpleLightbox('.gallery a', {
   captionDelay: 250,
   captionsData: 'alt',
 });
-gallery.on('show.simplelightbox');
