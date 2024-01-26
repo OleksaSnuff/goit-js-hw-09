@@ -36,10 +36,11 @@ initalizationForm();
 formRef.addEventListener('submit', e => {
   e.preventDefault();
   if (
-    formRef.elements.email.value !== '' ||
+    formRef.elements.email.value !== '' &&
     formRef.elements.message.value !== ''
-  )
+  ) {
     console.log(getFromLS(STORAGE_KEY) ?? '');
-  localStorage.removeItem(STORAGE_KEY);
-  formRef.reset();
+    localStorage.removeItem(STORAGE_KEY);
+    formRef.reset();
+  }
 });
